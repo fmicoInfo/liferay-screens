@@ -5,7 +5,7 @@ var screens = {
 	},
 
 	reloadScripts: function() {
-		this.screensScripts_.forEach(fn => fn());
+		this.screensScripts_.forEach(function(fn) { fn(); });
 	},
 
 	isAndroid: function() {
@@ -27,7 +27,7 @@ var screens = {
 	listPortlets: function() {
 		let portlets = window.Liferay.Portlet.list;
 
-		let parsedPortlets = portlets.map(portlet => {
+		let parsedPortlets = portlets.map(function(portlet) {
 			let portletSplitted = portlet.split('_');
 			let length = portletSplitted.length;
 			if (length >= 3 && portletSplitted[length - 2] === 'INSTANCE') {
@@ -37,7 +37,7 @@ var screens = {
 				return portlet;
 			}
 		})
-		.filter((x, idx, arr) => arr.indexOf(x) === idx).join(',');
+		.filter(function(x, idx, arr){ arr.indexOf(x) === idx }).join(',');
 
 		this.postMessage("screensInternal.listPortlets", parsedPortlets);
 	}
@@ -45,7 +45,7 @@ var screens = {
 
 window.Screens = Object.create(screens);
 
-window.Liferay.on('endNavigate', () => {
+window.Liferay.on('endNavigate', function(){
 	window.Screens.reloadScripts();
 });
 

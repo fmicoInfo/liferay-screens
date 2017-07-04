@@ -3,7 +3,9 @@ package com.liferay.mobile.screens.viewsets.defaultviews.portlet;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.webkit.ConsoleMessage;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
@@ -82,6 +84,12 @@ public class PortletDisplayView extends FrameLayout implements PortletDisplayVie
 		if (webView != null) {
 			webView.getSettings().setJavaScriptEnabled(true);
 			webView.addJavascriptInterface(new PortletDisplayInterface(), "android");
+			webView.setWebChromeClient(new WebChromeClient() {
+				@Override
+				public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
+					return super.onConsoleMessage(consoleMessage);
+				}
+			});
 
 			webView.postUrl(url, body.getBytes());
 
