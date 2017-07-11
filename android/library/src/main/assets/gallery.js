@@ -6,7 +6,7 @@ function addClickToCards() {
     	cards[i].addEventListener('click', function(event) {
     	let allAndCurrent = allImgSrc + i;
     	event.stopPropagation();
-    	android.postMessage("gallery", allAndCurrent);
+    	window.Screens.postMessage("gallery", allAndCurrent);
     })}
 }
 

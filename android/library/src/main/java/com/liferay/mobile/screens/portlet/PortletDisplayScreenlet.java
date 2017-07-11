@@ -175,18 +175,26 @@ public class PortletDisplayScreenlet extends BaseScreenlet<PortletDisplayViewMod
 		if (namespace.startsWith("screensInternal")) {
 			handleInternal(namespace, body);
 		} else {
-			getListener().onScriptMessageHandler(namespace, body);
+            if (listener != null) {
+                listener.onScriptMessageHandler(namespace, body);
+            }
 		}
 	}
 
 	@Override
 	public InjectableScript cssForPortlet(String portlet) {
-		return getListener().cssForPortlet(portlet);
+        if (listener != null){
+            return listener.cssForPortlet(portlet);
+        }
+        return null;
 	}
 
 	@Override
 	public InjectableScript jsForPortlet(String portlet) {
-		return getListener().jsForPortlet(portlet);
+        if (listener != null){
+            return getListener().jsForPortlet(portlet);
+        }
+        return null;
 	}
 
 	@Override
@@ -278,34 +286,33 @@ public class PortletDisplayScreenlet extends BaseScreenlet<PortletDisplayViewMod
 	private void handleInternal(String namespace, String body) {
 		if (namespace.endsWith("listPortlets")) {
 			String[] portlets = body.split(",");
-
-			for (String portlet : portlets) {
-
-				InjectableScript js = listener.jsForPortlet(portlet);
-				InjectableScript css = listener.cssForPortlet(portlet);
-
-				String fileName = getLayoutTheme() + "_" + portlet;
-
-				if (js == null) {
-					js = new JsScript(new AssetReader(getContext()).read(fileName));
-				}
-
-				if (css == null) {
-					css = new CssScript(new AssetReader(getContext()).read(fileName));
-				}
-
-				JavascriptInjector javascriptInjector = new JavascriptInjector(getContext());
-
-				if (!"".equals(js.getContent())) {
-					javascriptInjector.addJs(js.getContent(), true);
-				}
-
-				if (!"".equals(css.getContent())) {
-					javascriptInjector.addCss(css.getContent());
-				}
-
-				getViewModel().injectJavascript(javascriptInjector.generateInjectableJs());
-			}
+//
+//			for (String portlet : portlets) {
+//				InjectableScript js = listener.jsForPortlet(portlet);
+//				InjectableScript css = listener.cssForPortlet(portlet);
+//
+//				String fileName = getLayoutTheme() + "_" + portlet;
+//
+//				if (js == null) {
+//					js = new JsScript(new AssetReader(getContext()).read(fileName));
+//				}
+//
+//				if (css == null) {
+//					css = new CssScript(new AssetReader(getContext()).read(fileName));
+//				}
+//
+//				JavascriptInjector javascriptInjector = new JavascriptInjector(getContext());
+//
+//				if (!"".equals(js.getContent())) {
+//					javascriptInjector.addJs(js.getContent(), true);
+//				}
+//
+//				if (!"".equals(css.getContent())) {
+//					javascriptInjector.addCss(css.getContent());
+//				}
+//
+//				getViewModel().injectJavascript(javascriptInjector.generateInjectableJs());
+//			}
 		}
 	}
 }
