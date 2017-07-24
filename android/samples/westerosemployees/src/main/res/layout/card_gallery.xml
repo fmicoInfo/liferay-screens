@@ -47,7 +47,7 @@
 			app:autoLoad="false"
 			app:folderId="@string/folderId"
 			app:layoutId="@layout/gallery_westeros"
-			app:repositoryId="@string/liferay_group_id"
+			app:repositoryId="@string/liferay_repository_id"
 			>
 
 		</com.liferay.mobile.screens.imagegallery.ImageGalleryScreenlet>
