@@ -1,8 +1,13 @@
 package com.liferay.mobile.screens.viewsets.defaultviews.portlet;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.Transformation;
 import android.webkit.ConsoleMessage;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
@@ -193,7 +198,11 @@ public class PortletDisplayView extends FrameLayout implements PortletDisplayVie
 				webView.loadUrl("javascript:window.Screens.listPortlets()");
 			}
 
+			// The webview shows a white screen before loading its content, this prevent that.
+			webView.setAlpha(0);
 			webView.setVisibility(VISIBLE);
+			webView.animate().setStartDelay(200).alpha(1.0f);
+
 			progressBar.setVisibility(GONE);
 		}
 	}
