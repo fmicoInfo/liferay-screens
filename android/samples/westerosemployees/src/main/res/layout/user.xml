@@ -19,6 +19,7 @@
 			android:layout_width="70dp"
 			android:layout_height="70dp"
 			app:layoutId="@layout/userportrait_westeros"
+			app:autoLoad="false"
 			/>
 
 		<TextView
@@ -62,7 +63,8 @@
 		android:layout_marginTop="10dp"
 		app:autoLoad="false"
 		app:layoutId="@layout/asset_list_westeros_last_changes"
-		app:portletItemName="LastChangesItems"
+		app:portletItemName="LastChanges"
+		app:cachePolicy="REMOTE_ONLY"
 		/>
 
 	<com.liferay.mobile.screens.westerosemployees.views.UserDeck

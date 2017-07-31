@@ -112,6 +112,7 @@ public class PortletDisplayView extends FrameLayout implements PortletDisplayVie
 
 	@Override
 	public void showFinishOperation(String url, String body, String injectedJs) {
+		isLoaded = false;
 		if (webView != null) {
 			javaScriptToInject = injectedJs;
 
@@ -121,6 +122,7 @@ public class PortletDisplayView extends FrameLayout implements PortletDisplayVie
 
 	@Override
 	public void showFinishOperation(String url, String injectedJs) {
+		isLoaded = false;
 		if (webView != null) {
 			javaScriptToInject = injectedJs;
 
@@ -162,6 +164,10 @@ public class PortletDisplayView extends FrameLayout implements PortletDisplayVie
 
 	@Override
 	public void configureView(boolean isCordovaEnabled, CordovaLifeCycleObserver observer) {
+		if (webView != null) {
+			return;
+		}
+
 		if (isCordovaEnabled) {
 			screensWebView = new ScreensCordovaWebView(
 				LiferayScreensContext.getActivityFromContext(getContext()), observer);
@@ -186,6 +192,7 @@ public class PortletDisplayView extends FrameLayout implements PortletDisplayVie
 	public void onPageStarted() {
 		webView.addJavascriptInterface(new PortletDisplayInterface(), "android");
 	}
+
 
 	@Override
 	public void onPageFinished(String url) {

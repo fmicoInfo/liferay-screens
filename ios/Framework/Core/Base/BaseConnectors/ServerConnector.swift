@@ -151,7 +151,7 @@ import UIKit
 			if case .v62 = LiferayServerContext.serverVersion {
 				return canBeCookieExpiredError62(authentication: auth)
 			}
-			return lastError?.code == 403 &&
+			return lastError?.code == 2 &&
 				session.authentication.isKind(of: LRCookieAuthentication.self)
 
 		}

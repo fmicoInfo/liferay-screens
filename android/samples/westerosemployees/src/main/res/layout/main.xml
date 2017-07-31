@@ -57,7 +57,7 @@
 					android:layout_below="@id/signin_title"
 					app:basicAuthMethod="email"
 					app:credentialsStorage="auto"
-					app:loginMode="cookie"
+					app:loginMode="basic"
 					app:layoutId="@layout/login_westeros"
 					/>
 

@@ -2,6 +2,7 @@ package com.liferay.mobile.screens.westerosemployees.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import com.liferay.mobile.screens.asset.AssetEntry;
@@ -33,7 +34,6 @@ public class UserActivity extends WesterosActivity implements View.OnClickListen
 
 		UserPortraitScreenlet userPortraitScreenlet = (UserPortraitScreenlet) findViewById(R.id.userscreenlet_home);
 		userPortraitScreenlet.setOnClickListener(this);
-		userPortraitScreenlet.loadLoggedUserPortrait();
 
 		((AssetListScreenlet) findViewById(R.id.news_display_screenlet)).setListener(this);
 
@@ -55,12 +55,12 @@ public class UserActivity extends WesterosActivity implements View.OnClickListen
 
 	@Override
 	public void onListPageFailed(int startRow, Exception e) {
-
+		Log.d("", "");
 	}
 
 	@Override
 	public void onListPageReceived(int startRow, int endRow, List<AssetEntry> entries, int rowCount) {
-
+		((UserPortraitScreenlet) findViewById(R.id.userscreenlet_home)).loadLoggedUserPortrait();
 	}
 
 	@Override
@@ -74,6 +74,6 @@ public class UserActivity extends WesterosActivity implements View.OnClickListen
 
 	@Override
 	public void error(Exception e, String userAction) {
-
+		Log.d("","");
 	}
 }

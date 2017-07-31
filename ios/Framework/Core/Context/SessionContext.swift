@@ -168,8 +168,9 @@ import Foundation
 
 		LRCookieSignIn.signIn(with: session, callback: LRCookieBlockCallback { session, error in
 			if let session = session {
+                let userAttrs = SessionContext.currentContext?.user.attributes ?? [:]
 				SessionContext.loginWithCookie(authentication: session.authentication as! LRCookieAuthentication,
-						userAttributes: [:])
+						userAttributes: userAttrs)
 
 				callback.callback(session, nil)
 			}

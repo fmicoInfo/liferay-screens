@@ -56,27 +56,33 @@ public class AssetListAdapter extends BaseListAdapter<AssetEntry, AssetListAdapt
 
 		public void bind(AssetEntry entry) {
 
-			long creationDate = (long) entry.getValues().get("createDate");
-			long modifiedDate = (long) entry.getValues().get("modifiedDate");
+            long creationDate = (long) entry.getValues().get("createDate");
+            long modifiedDate = (long) entry.getValues().get("modifiedDate");
 
-			boolean isFile = isFile(entry);
+            boolean isFile = isFile(entry);
+            boolean isBlog = isBlog(entry);
 
-			String title = String.format("%s %s", Math.abs(creationDate - modifiedDate) < 5000 ? "New" : "Updated",
-				isFile ? "file" : "blog");
+            String title = String.format("%s %s", Math.abs(creationDate - modifiedDate) < 5000 ? "New" : "Updated",
+                    isFile ? "file" : "blog");
 
-			titleTextView.setText(title);
-			descriptionTextView.setText(entry.getTitle());
+            titleTextView.setText(title);
+            descriptionTextView.setText(entry.getTitle());
 
-			if (isFile) {
-				fillFileImage(entry);
-			} else {
-				fillBlogImage(entry);
-			}
+            if (isFile) {
+                fillFileImage(entry);
+            } else if(isBlog){
+                fillBlogImage(entry);
+            }
+
 		}
 
 		private boolean isFile(AssetEntry entry) {
 			return entry.getClassName().equals("com.liferay.document.library.kernel.model.DLFileEntry");
 		}
+
+        private boolean isBlog(AssetEntry entry) {
+            return entry.getClassName().equals("com.liferay.blogs.kernel.model.BlogsEntry");
+        }
 
 		private void fillFileImage(AssetEntry entry) {
 			FileEntry fileEntry = new FileEntry(entry.getValues());
