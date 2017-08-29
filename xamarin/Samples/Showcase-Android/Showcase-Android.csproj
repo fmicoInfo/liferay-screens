@@ -115,6 +115,7 @@
     <Compile Include="DDLFormActivity.cs" />
     <Compile Include="UserPortraitActivity.cs" />
     <Compile Include="WebContentDisplayActivity.cs" />
+    <Compile Include="AssetListActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -133,6 +134,7 @@
     <AndroidResource Include="Resources\layout\DDLFormView.axml" />
     <AndroidResource Include="Resources\layout\UserPortraitView.axml" />
     <AndroidResource Include="Resources\layout\WebContentDisplayView.axml" />
+    <AndroidResource Include="Resources\layout\AssetListView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
