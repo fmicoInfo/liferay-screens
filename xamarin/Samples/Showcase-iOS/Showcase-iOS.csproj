@@ -148,7 +148,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="LiferayScreens_iOS">
-      <HintPath>packages\LiferayScreens.0.1.0-beta6\lib\Xamarin.iOS10\LiferayScreens_iOS.dll</HintPath>
+      <HintPath>packages\LiferayScreens.0.1.0-beta5\lib\Xamarin.iOS10\LiferayScreens_iOS.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -178,10 +178,10 @@
     <InterfaceDefinition Include="Storyboard\SignUp.storyboard" />
     <InterfaceDefinition Include="Storyboard\SelectScreenlet.storyboard" />
     <InterfaceDefinition Include="Storyboard\DDLFormScreenlet.storyboard" />
-    <InterfaceDefinition Include="Storyboard\ImageGalleryScreenlet.storyboard" />
     <InterfaceDefinition Include="Storyboard\UserPortraitScreenlet.storyboard" />
     <InterfaceDefinition Include="Storyboard\WebContentScreenlet.storyboard" />
     <InterfaceDefinition Include="Storyboard\AssetListScreenlet.storyboard" />
+    <InterfaceDefinition Include="Storyboard\AssetDisplayScreenlet.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -212,10 +212,6 @@
     <Compile Include="ViewController\DDLFormViewController.designer.cs">
       <DependentUpon>DDLFormViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewController\ImageGalleryViewController.cs" />
-    <Compile Include="ViewController\ImageGalleryViewController.designer.cs">
-      <DependentUpon>ImageGalleryViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewController\UserPortraitViewController.cs" />
     <Compile Include="ViewController\UserPortraitViewController.designer.cs">
       <DependentUpon>UserPortraitViewController.cs</DependentUpon>
@@ -227,6 +223,10 @@
     <Compile Include="ViewController\AssetListViewController.cs" />
     <Compile Include="ViewController\AssetListViewController.designer.cs">
       <DependentUpon>AssetListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\AssetDisplayViewController.cs" />
+    <Compile Include="ViewController\AssetDisplayViewController.designer.cs">
+      <DependentUpon>AssetDisplayViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
