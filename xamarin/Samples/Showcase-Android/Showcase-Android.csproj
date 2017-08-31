@@ -117,6 +117,7 @@
     <Compile Include="WebContentDisplayActivity.cs" />
     <Compile Include="AssetListActivity.cs" />
     <Compile Include="AssetDisplayActivity.cs" />
+    <Compile Include="PdfDisplayActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -137,6 +138,7 @@
     <AndroidResource Include="Resources\layout\WebContentDisplayView.axml" />
     <AndroidResource Include="Resources\layout\AssetListView.axml" />
     <AndroidResource Include="Resources\layout\AssetDisplayView.axml" />
+    <AndroidResource Include="Resources\layout\PdfDisplayView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

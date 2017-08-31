@@ -12,4 +12,5 @@
 	<string name="web_content_display">Web Content Display</string>
 	<string name="asset_list">Asset List</string>
 	<string name="asset_display">Asset Display</string>
+	<string name="pdf_display">PDF Display</string>
 </resources>
