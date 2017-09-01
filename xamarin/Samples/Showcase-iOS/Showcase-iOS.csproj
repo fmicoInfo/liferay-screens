@@ -182,6 +182,8 @@
     <InterfaceDefinition Include="Storyboard\WebContentScreenlet.storyboard" />
     <InterfaceDefinition Include="Storyboard\AssetListScreenlet.storyboard" />
     <InterfaceDefinition Include="Storyboard\AssetDisplayScreenlet.storyboard" />
+    <InterfaceDefinition Include="ViewController\PdfDisplayViewController.xib" />
+    <InterfaceDefinition Include="Storyboard\PdfDisplayScreenlet.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -227,6 +229,10 @@
     <Compile Include="ViewController\AssetDisplayViewController.cs" />
     <Compile Include="ViewController\AssetDisplayViewController.designer.cs">
       <DependentUpon>AssetDisplayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\PdfDisplayViewController.cs" />
+    <Compile Include="ViewController\PdfDisplayViewController.designer.cs">
+      <DependentUpon>PdfDisplayViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
