@@ -14,7 +14,8 @@ namespace ShowcaseiOS.ViewController
             "AssetListScreenlet",
             "AssetDisplayScreenlet",
             "PdfDisplayScreenlet",
-            "AudioDisplayScreenlet"
+            "AudioDisplayScreenlet",
+            "VideoDisplayScreenlet"
         };
 
         protected string[] viewControllers = 
@@ -25,7 +26,8 @@ namespace ShowcaseiOS.ViewController
             "AssetListViewController",
             "AssetDisplayViewController",
             "PdfDisplayViewController",
-            "AudioDisplayViewController"
+            "AudioDisplayViewController",
+            "VideoDisplayViewController"
         };
 
         public SelectScreenletViewController(IntPtr handle) : base(handle) { }
