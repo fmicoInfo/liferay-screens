@@ -57,6 +57,10 @@
                 android:id="@+id/audio_display_screenlet"
                 android:text="@string/audio_display"
                 style="@style/test_app_button" />
+            <Button
+                android:id="@+id/comment_display_screenlet"
+                android:text="@string/comment_display"
+                style="@style/test_app_button" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

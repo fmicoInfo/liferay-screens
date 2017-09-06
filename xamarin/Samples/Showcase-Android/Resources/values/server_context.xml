@@ -55,4 +55,7 @@
     <string name="liferay_webcontent_display_class_pk">39226</string>
     <string name="liferay_webcontent_display_asset_entry"></string>	
 
+	<!-- CommentDisplay values -->
+	<string name="liferay_comment_display_class_pk">63710</string>
+
 </resources>
