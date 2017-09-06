@@ -58,4 +58,8 @@
 	<!-- CommentDisplay values -->
 	<string name="liferay_comment_display_class_pk">63710</string>
 
+	<!-- CommentAdd values -->
+    <string name="liferay_comment_add_class_name">com.liferay.document.library.kernel.model.DLFileEntry</string>
+	<string name="liferay_comment_add_class_pk">57177</string>
+
 </resources>
