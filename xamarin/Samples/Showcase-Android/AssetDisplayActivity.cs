@@ -17,7 +17,7 @@ namespace ShowcaseAndroid
             SetContentView(Resource.Layout.AssetDisplayView);
 
             assetDisplayScreenlet = (AssetDisplayScreenlet)FindViewById(Resource.Id.asset_display_screenlet);
-            assetDisplayScreenlet.SetListener(this);
+            assetDisplayScreenlet.Listener = this;
         }
 
 		public void Error(Java.Lang.Exception p0, string p1)
