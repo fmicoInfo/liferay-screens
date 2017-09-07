@@ -17,4 +17,5 @@
 	<string name="audio_display">Audio Display</string>
     <string name="comment_display">Comment Display</string>
     <string name="comment_add">Comment Add</string>
+	<string name="comment_list">Comment List</string>
 </resources>

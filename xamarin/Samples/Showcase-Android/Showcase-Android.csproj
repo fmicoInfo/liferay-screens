@@ -122,6 +122,7 @@
     <Compile Include="AudioDisplayActivity.cs" />
     <Compile Include="CommentDisplayActivity.cs" />
     <Compile Include="CommentAddActivity.cs" />
+    <Compile Include="CommentListActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -147,7 +148,7 @@
     <AndroidResource Include="Resources\layout\AudioDisplayView.axml" />
     <AndroidResource Include="Resources\layout\CommentDisplayView.axml" />
     <AndroidResource Include="Resources\layout\CommentAddView.axml" />
-    <AndroidResource Include="Resources\layout\CommentListLayout.axml" />
+    <AndroidResource Include="Resources\layout\CommentListView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
