@@ -21,6 +21,8 @@ namespace ShowcaseiOS.ViewController
 			"WebContentListScreenlet",
 			"RatingScreenlet",
             "BlogsScreenlet",
+            "DDLListScreenlet"
+
         };
 
         protected string[] viewControllers = 
