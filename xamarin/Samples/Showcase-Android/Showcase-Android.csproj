@@ -125,6 +125,7 @@
     <Compile Include="CommentListActivity.cs" />
     <Compile Include="WebContentListActivity.cs" />
     <Compile Include="RatingActivity.cs" />
+    <Compile Include="BlogEntryDisplayActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -153,6 +154,7 @@
     <AndroidResource Include="Resources\layout\CommentListView.axml" />
     <AndroidResource Include="Resources\layout\WebContentListView.axml" />
     <AndroidResource Include="Resources\layout\RatingView.axml" />
+    <AndroidResource Include="Resources\layout\BlogEntryDisplayView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

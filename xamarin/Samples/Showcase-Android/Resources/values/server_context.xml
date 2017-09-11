@@ -70,4 +70,8 @@
     <string name="liferay_rating_class_name">com.liferay.document.library.kernel.model.DLFileEntry</string>
     <string name="liferay_rating_list_class_pk">57177</string>
 
+	<!-- Blog Entry values -->
+    <string name="liferay_blog_entry_class_name">com.liferay.blogs.kernel.model.BlogsEntry</string>
+    <string name="liferay_blog_entry_class_pk">57366</string>
+
 </resources>

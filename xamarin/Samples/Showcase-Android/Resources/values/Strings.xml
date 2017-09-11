@@ -20,4 +20,5 @@
 	<string name="comment_list">Comment List</string>
     <string name="web_content_list">Web Content List</string>
     <string name="rating">Rating</string>
+	<string name="blog_entry">Blog Entry</string>
 </resources>
