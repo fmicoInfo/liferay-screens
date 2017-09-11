@@ -126,6 +126,7 @@
     <Compile Include="WebContentListActivity.cs" />
     <Compile Include="RatingActivity.cs" />
     <Compile Include="BlogEntryDisplayActivity.cs" />
+    <Compile Include="DDLListActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -155,6 +156,7 @@
     <AndroidResource Include="Resources\layout\WebContentListView.axml" />
     <AndroidResource Include="Resources\layout\RatingView.axml" />
     <AndroidResource Include="Resources\layout\BlogEntryDisplayView.axml" />
+    <AndroidResource Include="Resources\layout\DDLListView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

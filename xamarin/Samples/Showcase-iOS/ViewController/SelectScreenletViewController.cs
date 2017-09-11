@@ -40,6 +40,7 @@ namespace ShowcaseiOS.ViewController
             "WebcontentListViewController",
             "RatingViewController",
             "BlogsViewController",
+            "DDLListViewController"
         };
 
         public SelectScreenletViewController(IntPtr handle) : base(handle) { }

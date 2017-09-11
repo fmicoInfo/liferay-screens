@@ -74,4 +74,8 @@
     <string name="liferay_blog_entry_class_name">com.liferay.blogs.kernel.model.BlogsEntry</string>
     <string name="liferay_blog_entry_class_pk">57366</string>
 
+	<!-- DDL List values -->
+    <string name="liferay_label_fields">title</string>
+    <string name="liferay_recordset_id">33280</string>
+
 </resources>
