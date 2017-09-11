@@ -17,6 +17,7 @@ namespace ShowcaseiOS.ViewController
             "AudioDisplayScreenlet",
             "VideoDisplayScreenlet",
             "CommentAddScreenlet",
+            "CommentListScreenlet",
         };
 
         protected string[] viewControllers = 
@@ -30,6 +31,7 @@ namespace ShowcaseiOS.ViewController
             "AudioDisplayViewController",
             "VideoDisplayViewController",
             "CommentAddViewController",
+            "CommentListViewController",
         };
 
         public SelectScreenletViewController(IntPtr handle) : base(handle) { }
