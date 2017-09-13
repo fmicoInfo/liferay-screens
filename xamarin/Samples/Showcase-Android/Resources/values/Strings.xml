@@ -22,4 +22,5 @@
     <string name="rating">Rating</string>
 	<string name="blog_entry">Blog Entry</string>
 	<string name="ddl_list">DDL List</string>
+	<string name="web_screenlet">Web Screenlet</string>
 </resources>
